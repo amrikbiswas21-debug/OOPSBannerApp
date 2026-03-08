@@ -1,44 +1,35 @@
-public class stringOOPS {
+public class UC4Banner {
+
     public static void main(String[] args) {
 
-        String[] O = {
-                "  *****  ",
-                " *     * ",
-                "*       *",
-                "*       *",
-                "*       *",
-                " *     * ",
-                "  *****  "
-        };
+        // Step 1: Create an empty String array to store 7 banner lines
+        String[] banner = new String[7];
 
-        String[] P = {
-                "*******  ",
-                "*      * ",
-                "*      * ",
-                "*******  ",
-                "*        ",
-                "*        ",
-                "*        "
-        };
+        // Step 2: Populate each line using String.join()
+        banner[0] = String.join(" ",
+                "  *****  ", "  *****  ", "*******  ", "  *****  ");
 
-        String[] S = {
-                "  *****  ",
-                " *     * ",
-                " *        ",
-                "  *****  ",
-                "       * ",
-                " *     * ",
-                "  *****  "
-        };
+        banner[1] = String.join(" ",
+                " *     * ", " *     * ", "*      * ", " *     * ");
 
-        // Print OOPS side-by-side (same line alignment per row)
-        for (int i = 0; i < 7; i++) {
-            System.out.println(String.join(" ",
-                    O[i],
-                    O[i],
-                    P[i],
-                    S[i]
-            ));
+        banner[2] = String.join(" ",
+                "*       *", "*       *", "*      * ", " *       ");
+
+        banner[3] = String.join(" ",
+                "*       *", "*       *", "*******  ", "  *****  ");
+
+        banner[4] = String.join(" ",
+                "*       *", "*       *", "*        ", "       * ");
+
+        banner[5] = String.join(" ",
+                " *     * ", " *     * ", "*        ", " *     * ");
+
+        banner[6] = String.join(" ",
+                "  *****  ", "  *****  ", "*        ", "  *****  ");
+
+        // Step 3: Use enhanced for loop to print each line
+        for (String line : banner) {
+            System.out.println(line);
         }
     }
 }
